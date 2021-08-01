@@ -14,7 +14,9 @@ let cCardInput = document.querySelector('input[name="credit_card"]');
 
 // DATA
 let accounts = {};
-// let accounts = {};
+// NISAM siguran da li je ovo legit ali nakon prvog upita preuzimam sve accounts da bi posle lakse radio sa njima u js-u
+// Ovde sam se izvukao sa tim i ne moram da saljem puno upita ali ako je baza veca onda kontam da je bolje potrazivati
+//svaki pojedinacni account nego ova opcija
 
 buttons.forEach((btn) => {
 	btn.addEventListener("click", prikazi);
@@ -37,6 +39,7 @@ function prikazi(e) {
 }
 
 function displayControl(currentView) {
+	//KONTROLA PRIKAZA (prosledis funkciji koji je cuurent view koji zelis da se vidi)
 	for (let i = 0; i < allViews.length; i++) {
 		allViews[i].style.display = "none";
 		if (allViews[i].id === currentView) {
